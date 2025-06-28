@@ -67,7 +67,6 @@ $(document).ready(function () {
     $(".navbar .menu").removeClass("active");
     $(".menu-btn i").removeClass("active");
 
-    // Set active class on click
     $(".navbar .menu a").removeClass("active");
     $(this).addClass("active");
   });
@@ -95,5 +94,24 @@ $(document).ready(function () {
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
+  });
+
+  // --- Download Resume Button Loader ---
+  $("#resume-btn").on("click", function () {
+    var btn = $(this);
+    // Prevent action if already downloading
+    if (btn.hasClass("disabled")) {
+      return;
+    }
+    var originalText = btn.html();
+
+    btn.html('<i class="fas fa-spinner fa-spin"></i> Downloading...');
+    btn.addClass("disabled");
+
+    // Revert button state after 4 seconds
+    setTimeout(function () {
+      btn.html(originalText);
+      btn.removeClass("disabled");
+    }, 4000);
   });
 });

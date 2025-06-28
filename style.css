@@ -112,6 +112,12 @@ section {
 .section-dark .title::after {
   background: #111;
 }
+.section-dark a {
+  color: var(--primary-color);
+}
+.section-dark a:hover {
+  color: var(--text-light);
+}
 
 /* --- Navbar --- */
 .navbar {
@@ -265,7 +271,7 @@ body.dark-mode .menu-btn {
 .hero-btn {
   display: inline-block;
   background: var(--primary-color);
-  color: #fff; /*Explicitly set text color to white */
+  color: #fff !important;
   font-size: 22px;
   padding: 10px 32px;
   margin-top: 20px;
@@ -275,7 +281,7 @@ body.dark-mode .menu-btn {
 }
 .hero-btn:hover {
   background: none;
-  color: var(--primary-color); /* This color shows on hover */
+  color: var(--primary-color) !important;
 }
 .home-img {
   width: 400px;
@@ -341,15 +347,10 @@ body.dark-mode .menu-btn {
 .about .about-content .right .text {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 5px;
-}
-.about .about-content .right .dynamic-text {
-  font-size: 25px;
-  font-weight: 600;
   margin-bottom: 10px;
   min-height: 70px;
 }
-.about .about-content .right .dynamic-text span {
+.about .about-content .right .text span {
   color: var(--primary-color);
 }
 .about .about-content .right p {
@@ -369,6 +370,10 @@ body.dark-mode .menu-btn {
 .about .about-content .right a:hover {
   background: none;
   color: var(--primary-color);
+}
+.about .about-content .right a.disabled {
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 /* --- Education & Experience Section --- */
@@ -794,13 +799,20 @@ body.dark-mode .toggle-button::before {
   }
 }
 @media (max-width: 768px) {
+  /* FIX: Ensure consistent heading style on mobile */
   .title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+  }
+  .title::before {
+    display: none; /* Hide the line on mobile */
   }
   .title::after {
-    position: relative;
-    top: 5px;
+    position: relative; /* Let the subtitle flow normally */
+    top: 0;
+    bottom: auto;
     display: block;
+    margin-top: 5px; /* Add space between title and subtitle */
   }
   .home .home-content .text-2 {
     font-size: 50px;
@@ -843,6 +855,12 @@ body.dark-mode .toggle-button::before {
   }
   .home .home-content .text-3 {
     font-size: 22px;
+  }
+  /* FIX: Reduce hero & about image size on small mobile screens */
+  .home .home-img,
+  .about .about-content .left img {
+    width: 280px;
+    height: 280px;
   }
   .hero-socials a {
     font-size: 24px;
