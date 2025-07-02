@@ -11,7 +11,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <link
       rel="stylesheet"
@@ -48,9 +49,10 @@
     </nav>
 
     <section class="home section-dark" id="home">
+      <div id="particles-js"></div>
       <div class="max-width">
         <div class="home-content">
-          <div class="column left">
+          <div class="column left" data-aos="fade-right">
             <div class="text-1">Hello, my name is</div>
             <div class="text-2">Abu Bakar</div>
             <div class="text-3">And I'm a <span class="typing"></span></div>
@@ -59,18 +61,24 @@
               <a
                 href="https://www.linkedin.com/in/abubakarse005"
                 target="_blank"
+                aria-label="LinkedIn"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="https://github.com/CodeWithBakar" target="_blank"
+              <a
+                href="https://github.com/CodeWithBakar"
+                target="_blank"
+                aria-label="GitHub"
                 ><i class="fab fa-github"></i
               ></a>
-              <a href="mailto:abubakarxdev@gmail.com"
+              <a href="mailto:abubakarxdev@gmail.com" aria-label="Email"
                 ><i class="fas fa-envelope"></i
               ></a>
             </div>
           </div>
-          <div class="column right">
-            <img src="home.png" alt="Abu Bakar" class="home-img" />
+          <div class="column right" data-aos="fade-left">
+            <div class="home-img-container">
+              <img src="home.png" alt="Abu Bakar" class="home-img" />
+            </div>
           </div>
         </div>
       </div>
@@ -82,38 +90,52 @@
           About Me
         </h2>
         <div class="about-content">
-          <div class="column left" data-aos="zoom-in">
+          <div class="about-image-container" data-aos="fade-right">
             <img src="about.jpg" alt="Abu Bakar" />
           </div>
-          <div class="column right" data-aos="fade-left">
+          <div class="about-text-container" data-aos="fade-left">
             <div class="text">
               I'm Abu Bakar, and I'm a <span class="typing-2"></span>
             </div>
             <p>
-              Full-stack Software Engineer specializing in AI/ML integration and
-              high-performance web applications. Delivered measurable results
-              including 40% reduction in data errors and 35% improvement in
-              database performance through FastAPI and PostgreSQL optimization.
+              A results-driven Full-stack Software Engineer with a passion for
+              integrating AI/ML into high-performance web applications. My
+              experience includes delivering measurable results, such as a
+              <strong>40% reduction in data errors</strong> and a
+              <strong>35% improvement in database performance</strong>
+              through strategic use of FastAPI and PostgreSQL optimization.
             </p>
-            <a href="main.pdf" download id="resume-btn">Download Resume</a>
+            <a href="Abubakar_Resume.pdf" download id="resume-btn"
+              >Download Resume <i class="fas fa-download"></i
+            ></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="education section-dark" id="education">
-      <div class="max-width">
-        <h2 class="title" data-aos="fade-up" data-subtitle="my journey">
-          Education
-        </h2>
-        <div class="exp-edu-card" data-aos="fade-up">
-          <div class="exp-edu-icon">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="exp-edu-content">
-            <h3>Bachelor of Software Engineering</h3>
-            <p class="institution">COMSATS University Islamabad</p>
-            <p class="date">Feb 2021 - Jan 2025</p>
+    <div class="timeline-section" id="education">
+      <h2 class="title" data-aos="fade-up" data-subtitle="my journey">
+        Education
+      </h2>
+      <div class="timeline-items">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Feb 2021 – Jan 2025</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <img
+                src="https://comsats.org/wp-content/uploads/2018/05/COMSATS_Logo-300x300.jpg"
+                alt="COMSATS University Logo"
+                class="timeline-logo"
+              />
+              <div class="timeline-header-text">
+                <h3>Bachelor of Software Engineering</h3>
+                <p class="institution">COMSATS University Islamabad</p>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan
+                </div>
+              </div>
+            </div>
             <ul>
               <li>
                 Relevant Coursework: Data Science, Software Engineering,
@@ -131,21 +153,31 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="experience section-dark" id="experience">
-      <div class="max-width">
-        <h2 class="title" data-aos="fade-up" data-subtitle="where I've worked">
-          My Experience
-        </h2>
-        <div class="exp-edu-card" data-aos="fade-up">
-          <div class="exp-edu-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="exp-edu-content">
-            <h3>Software Engineer Intern</h3>
-            <p class="institution">Codeaza Technologies</p>
-            <p class="date">Feb 2025 - June 2025</p>
+    <div class="timeline-section" id="experience">
+      <h2 class="title" data-aos="fade-up" data-subtitle="where I've worked">
+        My Experience
+      </h2>
+      <div class="timeline-items">
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Feb 2025 – June 2025</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <img
+                src="codeaza_logo.jpeg"
+                alt="Codeaza Technologies Logo"
+                class="timeline-logo"
+              />
+              <div class="timeline-header-text">
+                <h3>Software Engineer Intern</h3>
+                <p class="institution">Codeaza Technologies</p>
+                <div class="location">
+                  <i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan
+                </div>
+              </div>
+            </div>
             <ul>
               <li>
                 Architected multi-tenant restaurant feedback platform serving
@@ -159,67 +191,115 @@
                 Optimized PostgreSQL queries and implemented testing, improving
                 dashboard performance by 35%.
               </li>
-              <li>
-                Deployed a real-time analytics dashboard with automated
-                validation, increasing customer satisfaction by 25%.
-              </li>
             </ul>
             <a href="certificate.jpeg" target="_blank" class="certificate-btn"
-              >View Certificate</a
-            >
+              >View Certificate <i class="fas fa-external-link-alt"></i
+            ></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <section class="skills" id="skills">
       <div class="max-width">
         <h2 class="title" data-aos="fade-up" data-subtitle="what I know">
           My Skills
         </h2>
-        <div class="skills-content">
-          <div class="column left" data-aos="fade-right">
-            <div class="text">My technical skills & expertise.</div>
-            <p>
-              As a dedicated software engineer, I have cultivated a diverse and
-              robust skill set spanning the full development lifecycle. From
-              creating responsive front-end interfaces to architecting scalable
-              back-end systems, I thrive on building efficient applications.
+        <div class="skills-container">
+          <div class="skill-category" data-aos="fade-up">
+            <h3 class="skill-category-title">
+              <i class="fas fa-code"></i> Frontend
+            </h3>
+            <p class="skill-category-description">
+              Crafting beautiful and responsive user interfaces with modern
+              technologies to create seamless user experiences.
             </p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="devicon-react-original colored"></i><span>React</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-redux-original colored"></i><span>Redux</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-javascript-plain colored"></i
+                ><span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-tailwindcss-original colored"></i
+                ><span>TailwindCSS</span>
+              </div>
+            </div>
           </div>
-          <div class="column right" data-aos="zoom-in-up">
-            <div class="skill-bar">
-              <i class="devicon-react-original colored"></i
-              ><span>React.js</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="skill-category-title">
+              <i class="fas fa-server"></i> Backend
+            </h3>
+            <p class="skill-category-description">
+              Building robust and scalable server-side applications and APIs to
+              power the web.
+            </p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="devicon-python-plain colored"></i><span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-fastapi-plain colored"></i
+                ><span>FastAPI</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-nodejs-plain colored"></i><span>Node.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-express-original colored"></i
+                ><span>Express.js</span>
+              </div>
             </div>
-            <div class="skill-bar">
-              <i class="devicon-redux-original colored"></i><span>Redux</span>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="skill-category-title">
+              <i class="fas fa-database"></i> Databases
+            </h3>
+            <p class="skill-category-description">
+              Managing and optimizing databases to ensure data integrity,
+              performance, and reliability.
+            </p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="devicon-postgresql-plain colored"></i
+                ><span>PostgreSQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-mongodb-plain colored"></i
+                ><span>MongoDB</span>
+              </div>
             </div>
-            <div class="skill-bar">
-              <i class="devicon-tailwindcss-plain colored"></i
-              ><span>TailwindCSS</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-python-plain colored"></i><span>Python</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-fastapi-plain colored"></i><span>FastAPI</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-nodejs-plain colored"></i><span>Node.js</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-postgresql-plain colored"></i
-              ><span>PostgreSQL</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-docker-plain colored"></i><span>Docker</span>
-            </div>
-            <div class="skill-bar">
-              <i class="devicon-git-plain colored"></i><span>Git</span>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="skill-category-title">
+              <i class="fas fa-brain"></i> AI/ML & DevOps
+            </h3>
+            <p class="skill-category-description">
+              Leveraging AI and Machine Learning to build intelligent systems,
+              and using DevOps for seamless deployment.
+            </p>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="devicon-tensorflow-original colored"></i
+                ><span>TensorFlow</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-docker-plain colored"></i><span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="devicon-git-plain colored"></i><span>Git</span>
+              </div>
             </div>
           </div>
         </div>
@@ -358,6 +438,7 @@
         | <span class="far fa-copyright"></span> 2025 All rights reserved.
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
