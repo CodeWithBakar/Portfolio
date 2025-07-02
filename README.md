@@ -78,7 +78,7 @@ This isn't just another portfolio website – it's a **fully interactive experie
 | 📁 **Project Showcase** | Interactive project cards with hover effects | ✅ Live |
 | 📄 **Resume Download** | One-click resume download functionality | ✅ Live |
 | 📧 **Contact Form** | Functional contact form with validation | ✅ Live |
-| 🌙 **Theme Toggle** | Dark/Light mode switcher | 🔄 Coming Soon |
+| 🌙 **Theme Toggle** | Dark/Light mode switcher | ✅ Live |
 
 ---
 
@@ -162,17 +162,27 @@ code .
 ## 🌟 Project Structure
 
 ```
-PORTFOLIO/
-├── 📁 screenshots/
-│   ├── 🖥️ desktop_view.png
-│   └── 📱 mobile_view.png
-├── 🖼️ about.jpg
-├── 🏠 home.png
-├── 📄 index.html
-├── 📋 main.pdf
-├── 📝 README.md
-├── ⚡ script.js
-└── 🎨 style.css
+🏗️ portfolio/
+├── 📁 assets/
+│   ├── 🎨 css/
+│   │   └── style.css           # Styling magic happens here
+│   ├── 📚 docs/
+│   │   ├── Abubakar_Resume.pdf # Professional resume
+│   │   └── certificate.jpeg    # Achievement certificates
+│   ├── 🖼️ images/
+│   │   ├── about.jpg          # About section visuals
+│   │   └── home.png           # Hero section graphics
+│   ├── ⚡ js/
+│   │   └── script.js          # Interactive functionality
+│   └── 🏢 logos/
+│       ├── codeaza_logo.jpeg  # Company branding
+│       └── comsats_logo.jpg   # University branding
+├── 📸 screenshots/
+│   ├── desktop_view.png       # Desktop preview
+│   └── mobile_view.png        # Mobile preview
+├── 🏠 index.html              # Main entry point
+├── 📜 LICENSE                 # MIT License
+└── 📖 README.md              # You are here!
 ```
 
 ---
